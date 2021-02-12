@@ -13,10 +13,9 @@ python:
 install:
 - pip install -r requirements.txt
 script:
-- sudo apt update
 - cd decide
 - cp travis_local_settings.py local_settings.py
-
-- python ./manage.py test postproc --keepdb
-
-
+- python ./manage.py test census --keepdb
+deploy:
+  api_key:
+    secure: VSU4FCdjh1fTKMujOY+EI8WrfnfNEjbOcz+Ndt9nL3dKqOYjvShQys19Y1azhyAAd/3fe6JOlzJbl0rZz3ZoFkpmqc3kRThoM3YPNLFwOX6aVcMtcZC36g7GV590+Xjcl06pYRTlqNSOFf/Z/MAKcN3tnS5fIm0+s8BNai47KH9q6BtQPB7hpKhAx3oGH4vcnhzGzc2mRGHciLY4r2ra4soZz305ApT9lLqxrBC4KcXBmKBTO0jKJ733Dbe8JYLwZubhKG9iNH/2mOr5Va4NvERtkL+5cftNURymXNuuSdVicsH3JSdwuNhBIKVNUD1apweLKvIIyNHChGm+b0o3IWI/0hIVTEA6ihpeqCl6WjtORjrNQnQXTpD/RfyqnzrGVKTMEsIhTwe80YND2tS4ZrBMP1yjaJxErLJTk38GBaq+LTSKED4ODvl2TYB01HcNaVyX/QHz1mVz642sYJGcoVodmb0htjV9Bv6Liv/wC6VAoMmcDUnm95alcWukQ7wlESzW4Oev1YfPauUBQMpGnJv0K0EypfHD7Qt6Bblmz/H2nSdNjGl8pAAsa7ts2UX9V1ecJ4QynTO2NtWhQJVQsxe2NnJ8pYlznclLKZmT1YyZ8c75JJgwoh/qOhvM/FKx/o9CBAUDGPEiNxexdBOqQBwfg9g7006IeNRMTzohwVg=
